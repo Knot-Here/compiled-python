@@ -1,4 +1,11 @@
 # Longest Common Subsequence
+import os
+import sys
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
 from src.utils.monitor_tools import track_time
 
 @track_time
@@ -11,5 +18,6 @@ def lcs(a, b):
             else:
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
     return dp[-1][-1]
+
 
 

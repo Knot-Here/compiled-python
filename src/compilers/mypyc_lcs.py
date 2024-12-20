@@ -8,4 +8,3 @@ def lcs(a: list[int], b: list[int]) -> int:
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
     return dp[-1][-1]
 
-

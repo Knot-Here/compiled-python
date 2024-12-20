@@ -1,4 +1,3 @@
-
 import time
 
 def track_time(func):
@@ -10,3 +9,5 @@ def track_time(func):
         print(f"Function {func.__name__} executed in {end_time - start_time:.6f} seconds")
         return result
     return wrapper
+
+
