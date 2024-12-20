@@ -3,7 +3,7 @@ from src.utils.monitor_tools import track_time
 # cython: language_level=3, boundscheck=False, wraparound=False
 import cython
 
-@cython.locals(i=cython.int, j=cython.int, a=List[cython.int], b=List[cython.int])
+@cython.locals(i=cython.int, j=cython.int, a=list[cython.int], b=list[cython.int])
 def lcs(a, b):
     dp = [[0] * (len(b) + 1) for _ in range(len(a) + 1)]
     for i in range(1, len(a) + 1):
