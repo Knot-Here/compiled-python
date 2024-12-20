@@ -1,3 +1,5 @@
+from src.utils.monitor_tools import track_time
+
 # cython: language_level=3, boundscheck=False, wraparound=False
 import cython
 

@@ -1,5 +1,7 @@
 # Longest Common Subsequence
+from src.utils.monitor_tools import track_time
 
+@track_time
 def lcs(a, b):
     dp = [[0] * (len(b) + 1) for _ in range(len(a) + 1)]
     for i in range(1, len(a) + 1):
@@ -11,4 +13,3 @@ def lcs(a, b):
     return dp[-1][-1]
 
 
-print(lcs([0,4,7,8,5], [5,3,6,7,8]))
